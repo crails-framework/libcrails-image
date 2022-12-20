@@ -1,0 +1,7 @@
+project = libcrails-image
+
+using version
+using config
+using test
+using install
+using dist

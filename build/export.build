@@ -1,0 +1,6 @@
+$out_root/
+{
+  include libcrails-image/
+}
+
+export $out_root/libcrails-image/$import.target
