@@ -2,6 +2,8 @@
 # define CRAILS_IMAGE_HPP
 
 # include <crails/attachment.hpp>
+# include <utility>
+# include <cstddef>
 
 namespace Crails
 {
@@ -27,6 +29,7 @@ namespace Crails
       return 85;
     }
 
+    std::pair<std::size_t, std::size_t> size() const;
     BasicImage resized(unsigned int x, unsigned int y, int options = NoOption);
     BasicImage cropped(unsigned int max_x, unsigned int max_y, int options = NoOption);
   };

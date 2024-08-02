@@ -6,6 +6,13 @@
 using namespace Crails;
 using namespace std;
 
+pair<size_t, size_t> BasicImage::size() const
+{
+  Magick::Image image(get_filepath());
+
+  return {image.columns(), image.rows()};
+}
+
 BasicImage BasicImage::resized(unsigned int width, unsigned int height, int options)
 {
   Magick::Image    image(get_filepath());
